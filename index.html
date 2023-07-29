@@ -121,6 +121,9 @@
         margin-left: 5px;
         height: 22px !important;
       }
+      .input-other {
+        height: 25px !important;
+      }
       input[type="date"]::-webkit-calendar-picker-indicator {
         display: block;
       }
@@ -182,7 +185,7 @@
         border-radius: 3px;
         font-size: 12px;
         margin-left: 5px;
-        height: 25px !important;
+        margin-top: 10px;
       }
       .p4 {
         border: 1px solid #ccc;
@@ -198,7 +201,7 @@
         border-radius: 3px;
         font-size: 12px;
         margin-left: 5px;
-        height: 25px !important;
+        margin-top: 10px;
       }
       .p4 label {
         font-size: 14px;
@@ -483,6 +486,7 @@
           <div class="space-questions">
             <label for="otherActivity">Other:</label> <br />
             <input
+              class="input-other"
               type="radio"
               id="otherActivityYes"
               name="otherActivity"
@@ -613,6 +617,7 @@
           />
           <label for="otherVaccination"> Other:</label>
           <input
+            class="input-other"
             type="text"
             id="otherVaccinationDetails"
             name="otherVaccinationDetails"
