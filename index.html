@@ -81,6 +81,11 @@
         border: 1px solid #ccc;
         padding: 10px;
       }
+      .p2 {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-top: 20px;
+      }
 
       .p1 input {
         width: 27%;
@@ -124,6 +129,29 @@
 
       input[type="date"]::placeholder {
         color: #999;
+      }
+
+      .p2 select {
+        height: 28px;
+        font-size: 10px;
+        background-color: white;
+      }
+      .p2 option {
+        font-size: 12px;
+        background-color: white;
+      }
+      .p2 option::-ms-value {
+        font-size: 12px;
+      }
+      .trip-activities-div {
+        font-size: 13px;
+      }
+      .trip-activities-div label {
+        font-weight: bold;
+        font-family: cursive;
+      }
+      .trip-companion {
+        margin-top: 10px;
       }
 
       @media screen and (min-width: 768px) {
@@ -175,7 +203,7 @@
         </button>
       </section>
       <section class="p2">
-        <h3>Trip Details</h3>
+        <h3 class="p1-header">Trip Details</h3>
         <label for="purpose">Purpose of Trip:</label><br />
         <select id="purpose" name="purpose" onchange="checkOther()">
           <option value="Business" selected="selected">Business</option>
@@ -192,160 +220,183 @@
           <label for="otherInput">Please Specify:</label
           ><input type="text" id="otherInput" name="otherInput" /><br />
         </div>
-        <br /><br />
+        <br />
 
         <label for="activities">Trip Activities:</label><br />
-        <label for="touristAreas"
-          >Visit only tourist's areas or major cities:</label
-        >
-        <input
-          type="radio"
-          id="touristAreasYes"
-          name="touristAreas"
-          value="yes"
-        />
-        <label for="touristAreasYes">Yes</label>
-        <input
-          type="radio"
-          id="touristAreasNo"
-          name="touristAreas"
-          value="no"
-        />
-        <label for="touristAreasNo">No</label>
-        <br />
-        <label for="ruralCommunities"
-          >Will spend time in rural communities:</label
-        >
-        <input
-          type="radio"
-          id="ruralCommunitiesYes"
-          name="ruralCommunities"
-          value="yes"
-        />
-        <label for="ruralCommunitiesYes">Yes</label>
-        <input
-          type="radio"
-          id="ruralCommunitiesNo"
-          name="ruralCommunities"
-          value="no"
-        />
-        <label for="ruralCommunitiesNo">No</label>
-        <br />
-        <label for="hiking">Go hiking or backpacking:</label>
-        <input type="radio" id="hikingYes" name="hiking" value="yes" />
-        <label for="hikingYes">Yes</label>
-        <input type="radio" id="hikingNo" name="hiking" value="no" />
-        <label for="hikingNo">No</label>
-        <br />
-        <label for="highAltitudes">Travel to high altitudes:</label>
-        <input
-          type="radio"
-          id="highAltitudesYes"
-          name="highAltitudes"
-          value="yes"
-        />
-        <label for="highAltitudesYes">Yes</label>
-        <input
-          type="radio"
-          id="highAltitudesNo"
-          name="highAltitudes"
-          value="no"
-        />
-        <label for="highAltitudesNo">No</label>
-        <br />
-        <label for="pilgrimage">Pilgrimage to Mecca:</label>
-        <input type="radio" id="pilgrimageYes" name="pilgrimage" value="yes" />
-        <label for="pilgrimageYes">Yes</label>
-        <input type="radio" id="pilgrimageNo" name="pilgrimage" value="no" />
-        <label for="pilgrimageNo">No</label>
-        <br />
-        <label for="religiousActivities">Other religious activities:</label>
-        <input
-          type="radio"
-          id="religiousActivitiesYes"
-          name="religiousActivities"
-          value="yes"
-        />
-        <label for="religiousActivitiesYes">Yes</label>
-        <input
-          type="radio"
-          id="religiousActivitiesNo"
-          name="religiousActivities"
-          value="no"
-        />
-        <label for="religiousActivitiesNo">No</label>
-        <br />
-        <label for="scubaDiving">Scuba dive or water activities:</label>
-        <input
-          type="radio"
-          id="scubaDivingYes"
-          name="scubaDiving"
-          value="yes"
-        />
-        <label for="scubaDivingYes">Yes</label>
-        <input type="radio" id="scubaDivingNo" name="scubaDiving" value="no" />
-        <label for="scubaDivingNo">No</label>
-        <br />
-        <label for="safari">Safari:</label>
-        <input type="radio" id="safariYes" name="safari" value="yes" />
-        <label for="safariYes">Yes</label>
-        <input type="radio" id="safariNo" name="safari" value="no" />
-        <label for="safariNo">No</label>
-        <br />
-        <label for="jungleTravel">Jungle travel:</label>
-        <input
-          type="radio"
-          id="jungleTravelYes"
-          name="jungleTravel"
-          value="yes"
-        />
-        <label for="jungleTravelYes">Yes</label>
-        <input
-          type="radio"
-          id="jungleTravelNo"
-          name="jungleTravel"
-          value="no"
-        />
-        <label for="jungleTravelNo">No</label>
-        <br />
-        <label for="cruiseShip">Cruise ship:</label>
-        <input type="radio" id="cruiseShipYes" name="cruiseShip" value="yes" />
-        <label for="cruiseShipYes">Yes</label>
-        <input type="radio" id="cruiseShipNo" name="cruiseShip" value="no" />
-        <label for="cruiseShipNo">No</label>
-        <br />
-        <label for="otherActivity">Other:</label>
-        <input
-          type="radio"
-          id="otherActivityYes"
-          name="otherActivity"
-          value="yes"
-          onchange="checkOtherActivity()"
-        />
-        <label for="otherActivityYes">Yes</label>
-        <input
-          type="radio"
-          id="otherActivityNo"
-          name="otherActivity"
-          value="no"
-          onchange="checkOtherActivity()"
-        />
-        <label for="otherActivityNo">No</label>
-        <input
-          type="text"
-          id="otherActivityDetails"
-          name="otherActivityDetails"
-          style="display: none"
-        />
-        <br />
-        <label for="companion">Trip Companion:</label><br />
-        <select id="companion" name="companion">
-          <option value="solo">Travel Solo</option>
-          <option value="seniors">Travel with Seniors</option>
-          <option value="kids">Travel with Kids</option>
-          <option value="partner">Travel with my Partner Only</option>
-          <option value="group">Travel with Group</option></select
-        ><br />
+        <div class="trip-activities-div">
+          <label for="touristAreas"
+            >Visit only tourist's areas or major cities:</label
+          >
+          <input
+            type="radio"
+            id="touristAreasYes"
+            name="touristAreas"
+            value="yes"
+            style="
+              color: blue;
+              font-size: 16px; /* Add other styles as needed */
+            "
+          />
+
+          <label for="touristAreasYes">Yes</label>
+          <input
+            type="radio"
+            id="touristAreasNo"
+            name="touristAreas"
+            value="no"
+          />
+          <label for="touristAreasNo">No</label>
+          <br />
+          <label for="ruralCommunities"
+            >Will spend time in rural communities:</label
+          >
+          <input
+            type="radio"
+            id="ruralCommunitiesYes"
+            name="ruralCommunities"
+            value="yes"
+          />
+          <label for="ruralCommunitiesYes">Yes</label>
+          <input
+            type="radio"
+            id="ruralCommunitiesNo"
+            name="ruralCommunities"
+            value="no"
+          />
+          <label for="ruralCommunitiesNo">No</label>
+          <br />
+          <label for="hiking">Go hiking or backpacking:</label>
+          <input type="radio" id="hikingYes" name="hiking" value="yes" />
+          <label for="hikingYes">Yes</label>
+          <input type="radio" id="hikingNo" name="hiking" value="no" />
+          <label for="hikingNo">No</label>
+          <br />
+          <label for="highAltitudes">Travel to high altitudes:</label>
+          <input
+            type="radio"
+            id="highAltitudesYes"
+            name="highAltitudes"
+            value="yes"
+          />
+          <label for="highAltitudesYes">Yes</label>
+          <input
+            type="radio"
+            id="highAltitudesNo"
+            name="highAltitudes"
+            value="no"
+          />
+          <label for="highAltitudesNo">No</label>
+          <br />
+          <label for="pilgrimage">Pilgrimage to Mecca:</label>
+          <input
+            type="radio"
+            id="pilgrimageYes"
+            name="pilgrimage"
+            value="yes"
+          />
+          <label for="pilgrimageYes">Yes</label>
+          <input type="radio" id="pilgrimageNo" name="pilgrimage" value="no" />
+          <label for="pilgrimageNo">No</label>
+          <br />
+          <label for="religiousActivities">Other religious activities:</label>
+          <input
+            type="radio"
+            id="religiousActivitiesYes"
+            name="religiousActivities"
+            value="yes"
+          />
+          <label for="religiousActivitiesYes">Yes</label>
+          <input
+            type="radio"
+            id="religiousActivitiesNo"
+            name="religiousActivities"
+            value="no"
+          />
+          <label for="religiousActivitiesNo">No</label>
+          <br />
+          <label for="scubaDiving">Scuba dive or water activities:</label>
+          <input
+            type="radio"
+            id="scubaDivingYes"
+            name="scubaDiving"
+            value="yes"
+          />
+          <label for="scubaDivingYes">Yes</label>
+          <input
+            type="radio"
+            id="scubaDivingNo"
+            name="scubaDiving"
+            value="no"
+          />
+          <label for="scubaDivingNo">No</label>
+          <br />
+          <label for="safari">Safari:</label>
+          <input type="radio" id="safariYes" name="safari" value="yes" />
+          <label for="safariYes">Yes</label>
+          <input type="radio" id="safariNo" name="safari" value="no" />
+          <label for="safariNo">No</label>
+          <br />
+          <label for="jungleTravel">Jungle travel:</label>
+          <input
+            type="radio"
+            id="jungleTravelYes"
+            name="jungleTravel"
+            value="yes"
+          />
+          <label for="jungleTravelYes">Yes</label>
+          <input
+            type="radio"
+            id="jungleTravelNo"
+            name="jungleTravel"
+            value="no"
+          />
+          <label for="jungleTravelNo">No</label>
+          <br />
+          <label for="cruiseShip">Cruise ship:</label>
+          <input
+            type="radio"
+            id="cruiseShipYes"
+            name="cruiseShip"
+            value="yes"
+          />
+          <label for="cruiseShipYes">Yes</label>
+          <input type="radio" id="cruiseShipNo" name="cruiseShip" value="no" />
+          <label for="cruiseShipNo">No</label>
+          <br />
+          <label for="otherActivity">Other:</label>
+          <input
+            type="radio"
+            id="otherActivityYes"
+            name="otherActivity"
+            value="yes"
+            onchange="checkOtherActivity()"
+          />
+          <label for="otherActivityYes">Yes</label>
+          <input
+            type="radio"
+            id="otherActivityNo"
+            name="otherActivity"
+            value="no"
+            onchange="checkOtherActivity()"
+          />
+          <label for="otherActivityNo">No</label>
+          <input
+            type="text"
+            id="otherActivityDetails"
+            name="otherActivityDetails"
+            style="display: none"
+          />
+        </div>
+        <div class="trip-companion">
+          <label for="companion">Trip Companion:</label><br />
+          <select id="companion" name="companion">
+            <option value="solo">Travel Solo</option>
+            <option value="seniors">Travel with Seniors</option>
+            <option value="kids">Travel with Kids</option>
+            <option value="partner">Travel with my Partner Only</option>
+            <option value="group">Travel with Group</option></select
+          ><br />
+        </div>
       </section>
       <section class="p3">
         <h3>Vaccination History</h3>
