@@ -187,9 +187,59 @@
 
         .p0 input {
           width: 100%;
+          padding: 8px 0px;
+          border-radius: 2px !important;
+        }
+        .p0 input::placeholder {
+        }
+        select {
+          width: 100%;
+          padding: 8px 0px;
+          border: 1px solid #ddd;
+          background-color: white;
+          border-radius: 2px !important;
+        }
+        input[type="date"] {
+          padding: 7.5px 0px;
+
+          background-color: white;
+          border-radius: 2px !important;
+        }
+        input[type="tel"] {
+          border: 1px solid #ddd;
+          background-color: white;
+          border-radius: 2px !important;
+        }
+        input[type="number"] {
+          border: 1px solid #ddd;
+          background-color: white;
+          border-radius: 2px !important;
         }
         .descontainer {
+          width: 50% !important;
+          padding: 8px 0px !important;
+          margin-left: 2px !important;
+          border-radius: 2px !important;
+        }
+
+        .p1 input[type="date"] {
           width: 100%;
+          padding: 7.5px 0px;
+          border-radius: 2px !important;
+        }
+        .input-other {
+          padding: 8px 0px;
+          border: 1px solid #ddd;
+          border-radius: 2px !important;
+        }
+        .button {
+          padding: 10px 30px !important;
+          margin-top: 5px !important;
+        }
+        button {
+          padding: 10px 30px !important;
+          border-radius: 0px !important;
+          margin-top: 5px !important;
         }
         .personal_medical_history td {
           display: block;
@@ -312,7 +362,12 @@
         </select>
         <div id="otherPurpose" style="display: none">
           <label for="otherInput">Please Specify:</label
-          ><input type="text" id="otherInput" name="otherInput" /><br />
+          ><input
+            type="text"
+            class="input-other"
+            id="otherInput"
+            name="otherInput"
+          /><br />
         </div>
         <br />
 
@@ -419,6 +474,7 @@
               <input type="checkbox" id="otherActivity" name="otherActivity" />
               <label for="otherActivity">Other</label>
               <input
+                class="input-other"
                 type="text"
                 id="otherActivityDetails"
                 name="otherActivityDetails"
@@ -607,6 +663,7 @@
               />
               <label for="otherVaccination"> Other:</label>
               <input
+                class="input-other"
                 type="text"
                 id="otherVaccinationDetails"
                 name="otherVaccinationDetails"
@@ -762,6 +819,7 @@
               />
               <label for="otherAllergy"> Other:</label>
               <input
+                class="input-other"
                 type="text"
                 id="otherAllergyDetails"
                 name="otherAllergyDetails"
@@ -1189,7 +1247,7 @@
       </section>
       <div id="warning-message"></div>
 
-      <input type="submit" value="Submit" class="form_submit_btn" />
+      <input type="submit" value="Submit" class="button form_submit_btn" />
     </form>
 
     <script>
